@@ -1,3 +1,6 @@
+backenApi/Middlewares/mail_sender/secret
+backenApi/venv
+
 # Logs
 logs
 *.log
