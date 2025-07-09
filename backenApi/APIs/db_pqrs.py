@@ -26,7 +26,8 @@ class Conexion_pqrs(mysql.connector.MySQLConnection):
                 cursor.execute("select * from PQRS order by consecutivo_solicitud ASC")
                 ultimo_consecutivo = cursor.fetchone()
                 cursor.fetchall()
-                
+                if not ultimo_consecutivo:
+                    return [{}]
         except Exception as e:
             return [{"error":e}], False
     @revisar_conexion
