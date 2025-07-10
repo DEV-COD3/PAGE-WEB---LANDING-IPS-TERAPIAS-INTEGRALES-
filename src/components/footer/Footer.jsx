@@ -31,8 +31,8 @@ const Footer = () => {
           <h4 className="font-semibold mb-4 text-lg">Donde estamos</h4>
           <ul className="space-y-2 text-gray-400">
             <li>Cra. 76 #49b-10</li>
-            <li>Medellín</li>
             <li>Colombia</li>
+            <li>Medellín</li>
           </ul>
         </div>
 
@@ -66,7 +66,7 @@ const Footer = () => {
         {/* Contacto */}
         <div>
           <h4 className="font-semibold mb-4 text-lg">Contáctenos</h4>
-          <ul className="space-y-2 text-gray-400">
+          <ul className="space-y-2 text-white">
             <li>+57 315 5866867</li>
             <li>
               <a

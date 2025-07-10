@@ -83,7 +83,7 @@ const Service = () => {
             {(onClose) => (
               <>
                 <ModalHeader className="flex flex-col gap-1"> {modalData.name} </ModalHeader>
-                <ModalBody>
+                <ModalBody class="whitespace-pre-line px-5">
                   <p>
                     {modalData.moreInfo}
                   </p>
