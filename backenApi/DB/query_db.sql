@@ -1,3 +1,8 @@
+create table tipo_persona(
+    id int primary key,
+    tipo varchar(30)
+);
+
 create table tipo_solicitudes(
     id int primary key not null,
     tipo varchar(40)
@@ -12,6 +17,9 @@ create table PQRS(
     consecutivo_solicitud varchar(30)
     tipo_solicitud int,
     tipo_documento int,
+    celular varchar(35),
+    telefono varchar(30)
+    correo_electronico varchar(100),
     documento_identidad varchar(15),
     nombre_completo varchar(80),
     detalle text
