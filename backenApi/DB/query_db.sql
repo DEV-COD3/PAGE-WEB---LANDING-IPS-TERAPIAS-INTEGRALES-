@@ -44,5 +44,6 @@ create table metadata_autorizacionXPQRS(
 
 
 insert into tipo_solicitudes(id, tipo) values (1,'Peticion'),(2,'Queja'),(3,'Reclamo'),(4,'Sugerencia');
-insert into tipo_documentos (id,tipo) values (1,'CedulaCiudadania'),(2,'TarjetaIdentidad'),(3,'RegistroCivil'),(4,'CedulaExtranjeria'),(5,'Pasaporte')
-insert into clasificacion(id, clasificacion) values (1, 'Calidad'),(2,'Oportunidad'),(3,'Profesional'),(4,'Otro')
+insert into tipo_documentos (id,tipo) values (1,'CedulaCiudadania'),(2,'TarjetaIdentidad'),(3,'RegistroCivil'),(4,'CedulaExtranjeria'),(5,'Pasaporte');
+insert into clasificacion(id, clasificacion) values (1, 'Calidad'),(2,'Oportunidad'),(3,'Profesional'),(4,'Otro');
+
