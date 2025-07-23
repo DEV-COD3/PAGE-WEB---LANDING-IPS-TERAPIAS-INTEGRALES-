@@ -1,2 +1,3 @@
 backenApi/Middlewares/mail_sender/secret
-backenApi/venv
+venv
+.env
