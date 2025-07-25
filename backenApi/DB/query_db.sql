@@ -25,9 +25,9 @@ create table tipos_documento(
     tipo varchar (40)
     );
 create table PQRS(
-    id int primary key,
+    id int primary key auto_increment,
     fecha_solicitud date,
-    consecutivo_solicitud varchar(30),
+    consecutivo_solicitud varchar(50),
     tipo_solicitud int,
     tipo_persona int,
     programa_atencion int,
@@ -60,5 +60,5 @@ insert into programas_atencion(id,programa) values (1,'Agudos'),(2,'Permanentes'
 insert into clasificaciones_pqrs(id, clasificacion) values (1, 'Calidad'),(2,'Oportunidad'),(3,'Profesional'),(4,'Otro');
 insert into tipos_documento (id,tipo) values (1,'CedulaCiudadania'),(2,'TarjetaIdentidad'),(3,'RegistroCivil'),(4,'CedulaExtranjeria'),(5,'Pasaporte');
 
-
+INSERT INTO `pqrs` (`id`, `fecha_solicitud`, `consecutivo_solicitud`, `tipo_solicitud`, `tipo_persona`, `programa_atencion`, `tipo_documento`, `celular`, `telefono`, `clasificacion`, `correo_electronico`, `documento_identidad`, `nombre_completo`, `detalle`) VALUES (NULL, '2025-07-01', 'prueba', '1', '1', '1', '1', 'prueba', 'prueba', NULL, 'prueba@prueba', 'prueba', 'prueba', 'prueba');
 

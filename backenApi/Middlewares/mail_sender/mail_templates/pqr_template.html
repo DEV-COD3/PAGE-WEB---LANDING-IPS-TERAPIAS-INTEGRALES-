@@ -2,48 +2,73 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Bienvenida a IPSTID</title>
+  <title>Resumen PQRS - IPSTID</title>
 </head>
-<body style="font-family: Arial, sans-serif; background-color: #f4f4f4; padding: 20px; color: #333;">
-  <table width="100%" style="max-width: 600px; margin: auto; background: #fff; padding: 20px; border-radius: 10px;">
+<body style="font-family: 'Segoe UI', Arial, sans-serif; background-color: #f0f2f5; padding: 30px;">
+  <table width="100%" cellpadding="0" cellspacing="0" style="max-width: 700px; margin: auto; background-color: #ffffff; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); padding: 30px;">
     <tr>
-      <td style="padding-top: 10px;">
-        <h2 style="color: #1a73e8;">IPSTID, SOMOS TÚ, SOMOS TODOS</h2>
-        <h3>Resumen PQRS Generada</h3>
-        <p><strong>👋 Hola, En este correo encontraras toda la informacion relacionada a la PQRS con consecutivo <br>{consecutivo}</strong></p>
-        <ul>
-          <p>PQRS</p>
-          <ul>
-            <li><strong>Tipo Solicitud:</strong> {tipo_solicitud}</li>
-            <li><strong>Programa Atencion:</strong> {programa_atencion}</li>
-            <li><strong>Fecha:</strong> {fecha}</li>
-          </ul>
-          <p>Cliente</p>
-          <ul>
-            <li><strong>Tipo Persona:</strong> {tipo_persona}</li>
-            <li><strong>Nombre:</strong> {nombre}</li>
-            <li><strong>Tipo Documento:</strong> {tipo_documento}</li>
-            <li><strong>No.</strong> {numero_documento}</li>
-            <li><strong>Celular</strong>{celular}</li>
-            <li><strong>Telefono</strong>{telefono}</li>
-          </ul>
-          
-          <li><strong>Contraseña:</strong> {contraseña_zeus}</li>
-          <li><strong>Enlace de acceso:</strong> <a href="http://201.184.160.114:8001/ZeusSalud/ips/" style="color: #1a73e8;">ZeusSalud</a>
-        </ul>
-            
-        <hr>
-        <p><strong>Esperamos que tengas una gran aventura en tu cargo como {cargo}</strong></p>
-        <p><strong>📄 Proceso Confirmación Citas:</strong><br>
-          <a href="https://drive.google.com/file/d/1OeulemhO4pzJ5Kxk3yZ5_hsnLSaYA0t1/view?usp=drive_link">VER PROCESO CONFIRMACION DE CITAS</a>
+      <td align="center">
+        <h2 style="color: #1a73e8; margin-bottom: 5px;">IPSTID, SOMOS TÚ, SOMOS TODOS</h2>
+        <h3 style="color: #333; margin-top: 0;">📄 Resumen PQRS Generada</h3>
+        <p style="color: #555; font-size: 14px;">Hola, en este correo encontrarás toda la información relacionada con tu solicitud.</p>
+        <p style="font-size: 18px; font-weight: bold; color: #2b9348;">Consecutivo: {consecutivo}</p>
+        <hr style="border: none; border-top: 1px solid #ddd; margin: 20px 0;">
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <h4 style="color: #1a73e8; margin-bottom: 10px;">📌 Detalles de la PQRS</h4>
+        <table width="100%" style="font-size: 14px; color: #333;">
+          <tr>
+            <td style="padding: 5px 0;"><strong>Tipo Solicitud:</strong></td>
+            <td>{tipo_solicitud}</td>
+          </tr>
+          <tr>
+            <td style="padding: 5px 0;"><strong>Programa Atención:</strong></td>
+            <td>{programa_atencion}</td>
+          </tr>
+          <tr>
+            <td style="padding: 5px 0;"><strong>Fecha:</strong></td>
+            <td>{fecha}</td>
+          </tr>
+        </table>
+
+        <h4 style="color: #1a73e8; margin-top: 30px; margin-bottom: 10px;">👤 Datos del Cliente</h4>
+        <table width="100%" style="font-size: 14px; color: #333;">
+          <tr>
+            <td style="padding: 5px 0;"><strong>Tipo Persona:</strong></td>
+            <td>{tipo_persona}</td>
+          </tr>
+          <tr>
+            <td style="padding: 5px 0;"><strong>Nombre:</strong></td>
+            <td>{nombre}</td>
+          </tr>
+          <tr>
+            <td style="padding: 5px 0;"><strong>Tipo Documento:</strong></td>
+            <td>{tipo_documento}</td>
+          </tr>
+          <tr>
+            <td style="padding: 5px 0;"><strong>Número Documento:</strong></td>
+            <td>{numero_documento}</td>
+          </tr>
+          <tr>
+            <td style="padding: 5px 0;"><strong>Celular:</strong></td>
+            <td>{celular}</td>
+          </tr>
+          <tr>
+            <td style="padding: 5px 0;"><strong>Teléfono:</strong></td>
+            <td>{telefono}</td>
+          </tr>
+        </table>
+
+        <h4 style="color: #1a73e8; margin-top: 30px; margin-bottom: 10px;">📝 Contenido</h4>
+        <p style="background-color: #f9f9f9; padding: 15px; border-left: 4px solid #1a73e8; color: #333;">
+          {detalle}
         </p>
-        <p><strong>💊 Cargue Notas Antibioticos:</strong><br>
-          <a href="https://drive.google.com/file/d/1OtQ4AMvg5yZB-svmrATrKcHf1MVxMLDx/view?usp=drive_link">VER PROCESO DE CARGUE NOTAS DE ANTIBIOTICO</a>
-        </p>
-        <br>
-        <p style="font-size: 12px; color: #888;">Visita nuesto sitio web -> <a href="web.ipstid.com">web.ipstid.com</a></p>
-        <p style="font-size: 12px; color: #888;">Califcica la induccion recibida por Sistemas -> <a href="https://forms.gle/3h1AhKE6SYuT46kM7">Encuesta</a></p>
-        <p style="font-size: 12px; color: #888;">Este mensaje ha sido enviado automáticamente por el sistema IPSTID.</p>
+
+        <hr style="border: none; border-top: 1px solid #ddd; margin: 30px 0;">
+        <p style="font-size: 12px; color: #888; text-align: center;">Este mensaje ha sido enviado automáticamente por el sistema IPSTID. Por favor, no responder directamente.</p>
       </td>
     </tr>
   </table>

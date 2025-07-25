@@ -8,7 +8,7 @@ class Conexion_pqrs(mysql.connector.MySQLConnection):
             'password':'',
             'database':'PQRS_WEB'}
         super().__init__(**config)
-    
+        
     def revisar_conexion(funcion_envuelta):
         def envoltura(self,*args,**kwargs):
             # Saas()
@@ -24,7 +24,7 @@ class Conexion_pqrs(mysql.connector.MySQLConnection):
         '''Retorna [mensaje] y Boolean '''
         try: 
             with self.cursor() as cursor:
-                cursor.execute("select * from PQRS order by consecutivo_solicitud ASC")
+                cursor.execute("select id from PQRS order by id DESC")
                 ultimo_consecutivo = cursor.fetchone()
                 cursor.fetchall()
                 if not ultimo_consecutivo:
@@ -52,8 +52,10 @@ class Conexion_pqrs(mysql.connector.MySQLConnection):
     def obtener_tipo_documento(self,tipo_documento_id):
         '''retorna [] y Boolean'''
         with self.cursor() as cursor:
+            print(tipo_documento_id)
             cursor.execute("select tipo from tipos_documento where id=%s",(tipo_documento_id,))
-        tipo = cursor.fetchall()
+            tipo = cursor.fetchall()
+            print("tipo")
         if not tipo:
             return ["No se encontró tipo documento asignado"], False
         return [tipo[0][0]], True
@@ -62,7 +64,7 @@ class Conexion_pqrs(mysql.connector.MySQLConnection):
         '''retorna [] y Boolean'''
         with self.cursor() as cursor:
             cursor.execute("select tipo from tipos_persona where id=%s",(tipo_persona_id,))
-        tipo = cursor.fetchall()
+            tipo = cursor.fetchall()
         if not tipo:
             return ["No se encontró tipo documento asignado"], False
         return [tipo[0][0]], True
@@ -71,21 +73,19 @@ class Conexion_pqrs(mysql.connector.MySQLConnection):
         '''retorna [] y Boolean'''
         with self.cursor() as cursor:
             cursor.execute("select tipo from tipos_solicitud where id=%s",(tipo_solicitud_id,))
-        tipo = cursor.fetchall()
+            tipo = cursor.fetchall()
         if not tipo:
             return ["No se encontró tipo documento asignado"], False
         return [tipo[0][0]], True
     @revisar_conexion
-    def obtener_programa_atencion(self,tipo_solicitud_id):
+    def obtener_programa_atencion(self,programa_atencion_id):
         '''retorna [] y Boolean'''
         with self.cursor() as cursor:
-            cursor.execute("select tipo from tipos_solicitud where id=%s",(tipo_solicitud_id,))
-        tipo = cursor.fetchall()
+            cursor.execute("select programa from programas_atencion where id=%s",(programa_atencion_id,))
+            tipo = cursor.fetchall()
         if not tipo:
             return ["No se encontró tipo documento asignado"], False
         return [tipo[0][0]], True
-    
-
 
     @revisar_conexion
     def generar_pqrs(self,fecha_solicitud, consecutivo_solicitud,
